@@ -1,20 +1,27 @@
-var val1 = promt('Введите любое значение');
-var val2 = promt('Введите любое значение');
+const result = +prompt('Enter month');
 
-const retMaxValofTwo = function(val1, val2){
-  if(typeof val1 === val2){
-    if(val1>val2){
-      return val1;
-    }else{
-      return val2
-    }
-  }
-  return null;
-}
-
-const typeNumber = function(val){
-  if(typeof val === 'number'){
-    return val%2 === 0 // true or false
-  }
-  return null;
+switch(result){
+  case 1:
+  case 2:
+  case 12: 
+    console.log("Now is winter");
+    break;
+  case 3:
+  case 4:
+  case 5: 
+    console.log("Now is spring");
+    break;
+  case 6:
+  case 7:
+  case 8: 
+    console.log("Now is summer");
+    break;
+  case 9:
+  case 10:
+  case 11: 
+    console.log("Now is fall");
+    break;
+  default:
+    console.log('Invalid data');
+    break;
 }
