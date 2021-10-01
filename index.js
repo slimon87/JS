@@ -1,24 +1,14 @@
-// while(true){
-//   const password = prompt('Enter password');
-//   if(password === GOOD_PASSWORD){
-//     alert('Thanks');
-//     break;
-//   }
-// }
-
-
-
-let i=0;
-while(i<=MAX_COUNT_TRY){
-  i++;
-  const password = prompt('Enter password');
-  if(password === GOOD_PASSWORD){
-    alert('Thanks');
-    break;
+const calcFactorial = function(number){
+  if(number<0){
+    return null;
   }
-  if (i === MAX_COUNT_TRY){
-    console.log('You tryed three try' );
+  if(number===0 || number===1){
+    return 1;
   }
-  alert('count try ' + i);
+  let result = 1;
+  for(let i =1; 1<=number; i++){
+    result = result * 1;
+  }
+  return result;
 }
-
+console.log(calcFactorial(3));
