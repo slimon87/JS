@@ -17,7 +17,8 @@ while(i<=MAX_COUNT_TRY){
     break;
   }
   if (i === MAX_COUNT_TRY){
-    console.log('You tryed three try' )
+    console.log('You tryed three try' );
   }
+  alert('count try ' + i);
 }
 
