@@ -17,30 +17,27 @@
 //   isMale:true,
 // };
 
-const rabbit = {
-  color: 'white',
-  jump: function(){
-    return 'I am jump';
-  },
-}
-const rabbitDom = {
-  name: 'Buny',
-  pet: function(){
-    return "Pet me";
+function LadderPrototype(){
+  this.up = function(){
+    this.value++;
+  }
+  this.down = function(){
+    this.value--;
+  }
+  this.showStep = function(){
+    return this.value
   }
 }
 
-const rabbitMagic =  {
-  say: function(word) {
-    return word;
-  }
+function Ladder(){
+  this.value = 0
 }
 
-rabbitDom.__proto__ = rabbit;
-rabbitMagic.__proto__ = rabbitDom;
+Ladder.prototype = new LadderPrototype();
+const myLadder = new Ladder();
 
-console.log(rabbitMagic.say('Hello, I am Magic rubbit'));
-console.log(rabbitMagic.pet());
-console.log(rabbitMagic.jump());
-
-
+myLadder.up();
+myLadder.up();
+myLadder.up();
+myLadder.down();
+console.log(myLadder.showStep());
