@@ -20,9 +20,11 @@
 function LadderPrototype(){
   this.up = function(){
     this.value++;
-  }
+    return this //возращает объект и можно использоватьцыпочку вызовов
+  } 
   this.down = function(){
     this.value--;
+    return this
   }
   this.showStep = function(){
     return this.value
@@ -41,3 +43,5 @@ myLadder.up();
 myLadder.up();
 myLadder.down();
 console.log(myLadder.showStep());
+
+const step = ladder1.up().up().up.()up().down().showStep();
