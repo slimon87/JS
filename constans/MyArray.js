@@ -14,6 +14,36 @@ function MyArrayProto(){
     delete this[this.lenght];
     return item;  
   }
+  this.forEach = function(func){
+    for(let i = 0; i<this.length; i++){
+      func(this[i]);
+    } 
+  }
+  this.some = function(func){
+    for(let i = 0; i<this.length; i++){
+      if(func(this[i])){
+        return true;
+      }
+    } 
+    return false;
+  }
+  this.every = function(func){
+    for(let i = 0; i<this.length; i++){
+      if(func(this[i])===false){
+        return false;
+      }
+    }
+    return true;
+  }
+  this.filter = function(func){
+    const result = new MyArray();
+    for(let i = 0; i<this.length; i++){
+      if(func(this[i])){
+        result.push(this[i]);
+      }
+    }
+    return result
+  }
 }
 
 /* data */

@@ -16,32 +16,17 @@
 //   age:65,
 //   isMale:true,
 // };
+function saySomething (howSay, whatSay){
+  howSay(whatSay);
+}
+saySomething(console.log, 'qwerty');
 
-function LadderPrototype(){
-  this.up = function(){
-    this.value++;
-    return this //возращает объект и можно использоватьцыпочку вызовов
-  } 
-  this.down = function(){
-    this.value--;
-    return this
-  }
-  this.showStep = function(){
-    return this.value
-  }
+saySomething(comfirm, 'qwerty');
+
+function isEven(n){
+  return n%2===0;
 }
 
-function Ladder(){
-  this.value = 0
+function isOdd(n){
+  return n%2===1;
 }
-
-Ladder.prototype = new LadderPrototype();
-const myLadder = new Ladder();
-
-myLadder.up();
-myLadder.up();
-myLadder.up();
-myLadder.down();
-console.log(myLadder.showStep());
-
-const step = ladder1.up().up().up.()up().down().showStep();
